@@ -1,0 +1,12 @@
+{
+  "title": "New AI breakthrough announced",
+  "link": "https://www.zdnet.com/article/example",
+  "description": "Article summary text.",
+  "author": "Jane Smith",
+  "pubDate": "2026-05-01T12:00:00Z",
+  "category": [
+    "AI",
+    "Innovation"
+  ],
+  "guid": "https://www.zdnet.com/article/example#guid"
+}

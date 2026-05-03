@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RssFeed",
+  "description": "RSS 2.0 feed envelope describing a list of news articles.",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-schema/rss-rss-feed-schema.json",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Feed title.",
+      "example": "ZDNet"
+    },
+    "link": {
+      "type": "string",
+      "format": "uri",
+      "description": "Feed website URL.",
+      "example": "https://www.zdnet.com"
+    },
+    "description": {
+      "type": "string",
+      "description": "Feed description.",
+      "example": "ZDNet news, analysis, and reviews."
+    },
+    "language": {
+      "type": "string",
+      "description": "Language code.",
+      "example": "en-US"
+    },
+    "items": {
+      "type": "array",
+      "description": "List of article items.",
+      "items": {
+        "$ref": "#/components/schemas/RssItem"
+      },
+      "example": [
+        {}
+      ]
+    }
+  }
+}

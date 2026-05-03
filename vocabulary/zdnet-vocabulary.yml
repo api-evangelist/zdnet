@@ -1,0 +1,40 @@
+vocabulary: 1.0.0
+info:
+  provider: ZDNet
+  description: Vocabulary for ZDNet APIs.
+  created: '2026-05-03'
+  modified: '2026-05-03'
+operational:
+  apis:
+    - name: ZDNet RSS Feed API
+      namespace: zdnet-rss-feed-api
+      version: 1.0.0
+      baseUrl: https://www.zdnet.com
+      status: active
+  resources:
+    - name: news
+      methods:
+        - get
+    - name: topic
+      methods:
+        - get
+  actions:
+    - verb: get
+      methods:
+        - GET
+  schemas:
+    core:
+      - Error
+      - RssFeed
+      - RssItem
+capability:
+  workflows:
+    - name: ZDNet Workflow
+      file: capabilities/zdnet-workflow.yaml
+      description: Unified workflow for ZDNet
+      apis:
+        - zdnet-rss-feed-api
+  personas:
+    - id: developer
+      name: Developer
+      description: Integrates with ZDNet APIs

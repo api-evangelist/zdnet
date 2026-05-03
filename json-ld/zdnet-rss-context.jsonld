@@ -1,0 +1,46 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "zdnet": "https://zdnet.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "RssFeed": "zdnet:RssFeed",
+    "RssItem": "zdnet:RssItem",
+    "title": {
+      "@id": "zdnet:title",
+      "@type": "xsd:string"
+    },
+    "link": {
+      "@id": "zdnet:link",
+      "@type": "xsd:string"
+    },
+    "description": "schema:description",
+    "language": {
+      "@id": "zdnet:language",
+      "@type": "xsd:string"
+    },
+    "items": {
+      "@id": "zdnet:items",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "author": {
+      "@id": "zdnet:author",
+      "@type": "xsd:string"
+    },
+    "pubDate": {
+      "@id": "zdnet:pubDate",
+      "@type": "xsd:dateTime"
+    },
+    "category": {
+      "@id": "zdnet:category",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "guid": {
+      "@id": "zdnet:guid",
+      "@type": "xsd:string"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-structure/rss-rss-item-structure.json",
+  "name": "RssItem",
+  "description": "A single RSS feed article item.",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Article title.",
+      "example": "New AI breakthrough announced"
+    },
+    "link": {
+      "type": "uri",
+      "description": "Article URL.",
+      "example": "https://www.zdnet.com/article/example"
+    },
+    "description": {
+      "type": "string",
+      "description": "Article summary.",
+      "example": "Article summary text."
+    },
+    "author": {
+      "type": "string",
+      "description": "Article author.",
+      "example": "Jane Smith"
+    },
+    "pubDate": {
+      "type": "datetime",
+      "description": "Publication date.",
+      "example": "2026-05-01T12:00:00Z"
+    },
+    "category": {
+      "type": "array",
+      "description": "Article categories.",
+      "items": {
+        "type": "string"
+      },
+      "example": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "guid": {
+      "type": "string",
+      "description": "Unique article identifier.",
+      "example": "https://www.zdnet.com/article/example#guid"
+    }
+  },
+  "required": [
+    "title",
+    "link"
+  ]
+}

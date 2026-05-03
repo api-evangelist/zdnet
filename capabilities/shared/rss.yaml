@@ -1,0 +1,58 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: ZDNet RSS Feed API
+  description: RSS feed endpoints from ZDNet covering enterprise IT, security, cloud, AI, development, and innovation news. Each feed returns RSS 2.0 XML content.
+  tags:
+    - News
+    - Security
+    - Cloud
+    - AI
+  created: '2026-05-03'
+  modified: '2026-05-03'
+capability:
+  consumes:
+    - type: http
+      namespace: rss
+      baseUri: https://www.zdnet.com
+      description: RSS feed endpoints from ZDNet covering enterprise IT, security, cloud, AI, development, and innovation news. Each feed returns RSS 2.0 XML content.
+      resources:
+        - name: rss
+          path: /
+          description: RSS feed endpoints from ZDNet covering enterprise IT, security, cloud, AI, development, and innovation news. Each feed returns RSS 2.0 XML content.
+          operations:
+            - name: get-news-rss-feed
+              method: GET
+              path: /news/rss.xml
+              description: ZDNet Get News RSS Feed
+              inputParameters: []
+              outputRawFormat: json
+            - name: get-security-rss-feed
+              method: GET
+              path: /topic/security/rss.xml
+              description: ZDNet Get Security RSS Feed
+              inputParameters: []
+              outputRawFormat: json
+            - name: get-cloud-rss-feed
+              method: GET
+              path: /topic/cloud/rss.xml
+              description: ZDNet Get Cloud RSS Feed
+              inputParameters: []
+              outputRawFormat: json
+            - name: get-ai-rss-feed
+              method: GET
+              path: /topic/artificial-intelligence/rss.xml
+              description: ZDNet Get AI RSS Feed
+              inputParameters: []
+              outputRawFormat: json
+            - name: get-developer-rss-feed
+              method: GET
+              path: /topic/developer/rss.xml
+              description: ZDNet Get Developer RSS Feed
+              inputParameters: []
+              outputRawFormat: json
+            - name: get-innovation-rss-feed
+              method: GET
+              path: /topic/innovation/rss.xml
+              description: ZDNet Get Innovation RSS Feed
+              inputParameters: []
+              outputRawFormat: json

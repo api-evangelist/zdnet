@@ -1,0 +1,88 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: ZDNet Workflow
+  description: Unified workflow capability composing ZDNet APIs.
+  tags:
+    - ZDNet
+  created: '2026-05-03'
+  modified: '2026-05-03'
+capability:
+  consumes:
+    - import: rss
+      location: ./shared/rss.yaml
+  exposes:
+    - type: rest
+      port: 8080
+      namespace: zdnet-api
+      description: Unified REST API for ZDNet
+      resources:
+        - path: /v1/rss
+          name: rss
+          description: Operations for rss
+          operations:
+            - method: GET
+              name: get-news-rss-feed
+              description: ZDNet Get News RSS Feed
+              call: rss.get-news-rss-feed
+            - method: GET
+              name: get-security-rss-feed
+              description: ZDNet Get Security RSS Feed
+              call: rss.get-security-rss-feed
+            - method: GET
+              name: get-cloud-rss-feed
+              description: ZDNet Get Cloud RSS Feed
+              call: rss.get-cloud-rss-feed
+            - method: GET
+              name: get-ai-rss-feed
+              description: ZDNet Get AI RSS Feed
+              call: rss.get-ai-rss-feed
+            - method: GET
+              name: get-developer-rss-feed
+              description: ZDNet Get Developer RSS Feed
+              call: rss.get-developer-rss-feed
+            - method: GET
+              name: get-innovation-rss-feed
+              description: ZDNet Get Innovation RSS Feed
+              call: rss.get-innovation-rss-feed
+    - type: mcp
+      port: 9090
+      namespace: zdnet-mcp
+      transport: http
+      description: MCP server for ZDNet
+      tools:
+        - name: rss-get-news-rss-feed
+          description: ZDNet Get News RSS Feed
+          hints:
+            readOnly: true
+            openWorld: true
+          call: rss.get-news-rss-feed
+        - name: rss-get-security-rss-feed
+          description: ZDNet Get Security RSS Feed
+          hints:
+            readOnly: true
+            openWorld: true
+          call: rss.get-security-rss-feed
+        - name: rss-get-cloud-rss-feed
+          description: ZDNet Get Cloud RSS Feed
+          hints:
+            readOnly: true
+            openWorld: true
+          call: rss.get-cloud-rss-feed
+        - name: rss-get-ai-rss-feed
+          description: ZDNet Get AI RSS Feed
+          hints:
+            readOnly: true
+            openWorld: true
+          call: rss.get-ai-rss-feed
+        - name: rss-get-developer-rss-feed
+          description: ZDNet Get Developer RSS Feed
+          hints:
+            readOnly: true
+            openWorld: true
+          call: rss.get-developer-rss-feed
+        - name: rss-get-innovation-rss-feed
+          description: ZDNet Get Innovation RSS Feed
+          hints:
+            readOnly: true
+            openWorld: true
+          call: rss.get-innovation-rss-feed
