@@ -3,26 +3,39 @@ url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/apis
 apis:
   - aid: zdnet:rss
     name: ZDNet RSS Feed
-    description: RSS feed providing the latest news, analysis, and reviews from ZDNet covering enterprise IT, security, cloud, hardware, software, and business technology.
+    description: RSS feeds providing the latest news, analysis, and reviews from ZDNet covering enterprise IT, security, cloud, hardware, software, artificial intelligence, and business technology for IT professionals.
     image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://www.zdnet.com/news/rss.xml
     baseURL: https://www.zdnet.com
     tags:
+      - Artificial Intelligence
+      - Cloud
       - Enterprise IT
       - News Feed
       - RSS
+      - Security
       - Technology News
     properties:
       - url: https://www.zdnet.com/news/rss.xml
         type: RSS
+        name: ZDNet News RSS Feed
       - url: https://www.zdnet.com/topic/security/rss.xml
         type: RSS
+        name: ZDNet Security RSS Feed
       - url: https://www.zdnet.com/topic/cloud/rss.xml
         type: RSS
+        name: ZDNet Cloud RSS Feed
       - url: https://www.zdnet.com/topic/artificial-intelligence/rss.xml
         type: RSS
+        name: ZDNet AI RSS Feed
+      - url: https://www.zdnet.com/topic/developer/rss.xml
+        type: RSS
+        name: ZDNet Developer RSS Feed
+      - url: https://www.zdnet.com/topic/innovation/rss.xml
+        type: RSS
+        name: ZDNet Innovation RSS Feed
 name: ZDNet
-description: ZDNet is a business technology news website owned by Ziff Davis, covering enterprise IT, cybersecurity, cloud computing, hardware, software, and innovation for IT professionals and tech-savvy business leaders.
+description: ZDNet is a business technology news website owned by Ziff Davis, covering enterprise IT, cybersecurity, cloud computing, hardware, software, and innovation for IT professionals and tech-savvy business leaders. ZDNet provides news, analysis, product reviews, and how-to guides. No public developer API is available; content is accessible via RSS feeds.
 tags:
   - Enterprise IT
   - Media
@@ -48,6 +61,9 @@ common:
     type: RSS
   - url: https://www.zdnet.com/topic/artificial-intelligence/rss.xml
     name: AI RSS Feed
+    type: RSS
+  - url: https://www.zdnet.com/topic/developer/rss.xml
+    name: Developer RSS Feed
     type: RSS
   - url: https://www.zdnet.com/newsletters/
     name: Newsletters
@@ -80,5 +96,8 @@ common:
     name: ZDNet Video Podcast on Apple Podcasts
     type: Podcast
 created: '2024-01-01'
-modified: '2026-03-24'
+modified: '2026-05-03'
 specificationVersion: '0.19'
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
