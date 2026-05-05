@@ -1,0 +1,43 @@
+{
+  "repo": "zdnet",
+  "feeds": [
+    {
+      "source": "https://www.zdnet.com/news/rss.xml",
+      "feed_url": "https://www.zdnet.com/news/rss.xml",
+      "saved": 10,
+      "title": "Latest news"
+    },
+    {
+      "source": "https://www.zdnet.com/topic/security/rss.xml",
+      "feed_url": "https://www.zdnet.com/topic/security/rss.xml",
+      "saved": 10,
+      "title": "Latest news"
+    },
+    {
+      "source": "https://www.zdnet.com/topic/cloud/rss.xml",
+      "feed_url": "https://www.zdnet.com/topic/cloud/rss.xml",
+      "saved": 10,
+      "title": "Latest news"
+    },
+    {
+      "source": "https://www.zdnet.com/topic/artificial-intelligence/rss.xml",
+      "feed_url": "https://www.zdnet.com/topic/artificial-intelligence/rss.xml",
+      "saved": 10,
+      "title": "Latest news"
+    },
+    {
+      "source": "https://www.zdnet.com/topic/developer/rss.xml",
+      "feed_url": "https://www.zdnet.com/topic/developer/rss.xml",
+      "saved": 10,
+      "title": "Latest news"
+    },
+    {
+      "source": "https://www.zdnet.com/topic/innovation/rss.xml",
+      "feed_url": "https://www.zdnet.com/topic/innovation/rss.xml",
+      "saved": 10,
+      "title": "Latest news"
+    }
+  ],
+  "post_count": 60,
+  "fetched": "2026-05-03T23:38:34Z"
+}
