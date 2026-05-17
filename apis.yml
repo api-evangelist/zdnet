@@ -41,7 +41,7 @@ apis:
       - url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-structure/
         type: JSONStructure
       - url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-ld/zdnet-rss-context.jsonld
-        type: JSON-LD
+        type: JSONLD
       - url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/examples/
         type: Example
 name: ZDNet
