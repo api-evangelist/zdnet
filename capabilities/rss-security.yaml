@@ -1,0 +1,67 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: ZDNet RSS Feed API — Security
+  description: 'ZDNet RSS Feed API — Security. 1 operations. Lead operation: ZDNet Get Security RSS Feed. Self-contained Naftiko
+    capability covering one Zdnet business surface.'
+  tags:
+  - Zdnet
+  - Security
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    ZDNET_API_KEY: ZDNET_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: rss-security
+    baseUri: https://www.zdnet.com
+    description: ZDNet RSS Feed API — Security business capability. Self-contained, no shared references.
+    resources:
+    - name: topic-security-rss.xml
+      path: /topic/security/rss.xml
+      operations:
+      - name: getsecurityrssfeed
+        method: GET
+        description: ZDNet Get Security RSS Feed
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: rss-security-rest
+    port: 8080
+    description: REST adapter for ZDNet RSS Feed API — Security. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/topic/security/rss-xml
+      name: topic-security-rss-xml
+      description: REST surface for topic-security-rss.xml.
+      operations:
+      - method: GET
+        name: getsecurityrssfeed
+        description: ZDNet Get Security RSS Feed
+        call: rss-security.getsecurityrssfeed
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: rss-security-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for ZDNet RSS Feed API — Security. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: zdnet-get-security-rss-feed
+      description: ZDNet Get Security RSS Feed
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: rss-security.getsecurityrssfeed
+      outputParameters:
+      - type: object
+        mapping: $.
