@@ -4,40 +4,46 @@
     {
       "source": "https://www.zdnet.com/news/rss.xml",
       "feed_url": "https://www.zdnet.com/news/rss.xml",
-      "title": "Latest news",
-      "saved": 20
+      "title": "",
+      "saved": 0,
+      "method": "feed"
     },
     {
       "source": "https://www.zdnet.com/topic/security/rss.xml",
       "feed_url": "https://www.zdnet.com/topic/security/rss.xml",
-      "title": "Latest news",
-      "saved": 0
+      "title": "",
+      "saved": 0,
+      "method": "feed"
     },
     {
       "source": "https://www.zdnet.com/topic/cloud/rss.xml",
       "feed_url": "https://www.zdnet.com/topic/cloud/rss.xml",
-      "title": "Latest news",
-      "saved": 0
+      "title": "",
+      "saved": 0,
+      "method": "feed"
     },
     {
       "source": "https://www.zdnet.com/topic/artificial-intelligence/rss.xml",
       "feed_url": "https://www.zdnet.com/topic/artificial-intelligence/rss.xml",
-      "title": "Latest news",
-      "saved": 0
+      "title": "",
+      "saved": 0,
+      "method": "feed"
     },
     {
       "source": "https://www.zdnet.com/topic/developer/rss.xml",
       "feed_url": "https://www.zdnet.com/topic/developer/rss.xml",
-      "title": "Latest news",
-      "saved": 0
+      "title": "",
+      "saved": 0,
+      "method": "feed"
     },
     {
       "source": "https://www.zdnet.com/topic/innovation/rss.xml",
       "feed_url": "https://www.zdnet.com/topic/innovation/rss.xml",
-      "title": "Latest news",
-      "saved": 0
+      "title": "",
+      "saved": 0,
+      "method": "feed"
     }
   ],
-  "post_count": 100,
-  "fetched": "2026-05-17T20:20:35Z"
+  "post_count": 120,
+  "fetched": "2026-06-01T23:35:02Z"
 }
