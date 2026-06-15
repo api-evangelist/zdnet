@@ -1,0 +1,108 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ZDNet RSS Feed API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "News",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "ZDNet Get News RSS Feed",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.zdnet.com/news/rss.xml"
+          },
+          "docs": "Returns the latest news articles from ZDNet as an RSS 2.0 feed."
+        },
+        {
+          "info": {
+            "name": "ZDNet Get Developer RSS Feed",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.zdnet.com/topic/developer/rss.xml"
+          },
+          "docs": "Returns the latest developer-focused articles from ZDNet as an RSS 2.0 feed."
+        },
+        {
+          "info": {
+            "name": "ZDNet Get Innovation RSS Feed",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.zdnet.com/topic/innovation/rss.xml"
+          },
+          "docs": "Returns the latest innovation articles from ZDNet as an RSS 2.0 feed."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Security",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "ZDNet Get Security RSS Feed",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.zdnet.com/topic/security/rss.xml"
+          },
+          "docs": "Returns the latest security articles from ZDNet as an RSS 2.0 feed."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Cloud",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "ZDNet Get Cloud RSS Feed",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.zdnet.com/topic/cloud/rss.xml"
+          },
+          "docs": "Returns the latest cloud computing articles from ZDNet as an RSS 2.0 feed."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "AI",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "ZDNet Get AI RSS Feed",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.zdnet.com/topic/artificial-intelligence/rss.xml"
+          },
+          "docs": "Returns the latest AI articles from ZDNet as an RSS 2.0 feed."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
