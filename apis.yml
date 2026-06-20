@@ -6,7 +6,7 @@ apis:
     description: >-
       RSS feeds providing the latest news, analysis, and reviews from ZDNet covering enterprise IT, security, cloud,
       hardware, software, artificial intelligence, and business technology for IT professionals.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.zdnet.com/news/rss.xml
     baseURL: https://www.zdnet.com
     tags:
@@ -57,7 +57,7 @@ tags:
   - Media
   - Technology News
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 common:
   - url: https://www.zdnet.com/
