@@ -45,7 +45,7 @@ apis:
       - url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-ld/zdnet-rss-context.jsonld
         type: JSONLD
       - url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/examples/
-        type: Example
+        type: Examples
 name: ZDNet
 description: >-
   ZDNet is a business technology news website owned by Ziff Davis, covering enterprise IT, cybersecurity, cloud
