@@ -1,25 +1,17 @@
 openapi: 3.0.3
 info:
-  title: ZDNet RSS Feed API
-  description: >-
-    RSS feed endpoints from ZDNet covering enterprise IT, security, cloud, AI,
-    development, and innovation news. Each feed returns RSS 2.0 XML content.
-  version: '1.0.0'
+  title: ZDNet RSS Feed AI News API
+  description: RSS feed endpoints from ZDNet covering enterprise IT, security, cloud, AI, development, and innovation news. Each feed returns RSS 2.0 XML content.
+  version: 1.0.0
   contact:
     name: ZDNet
     url: https://www.zdnet.com
 servers:
-  - url: https://www.zdnet.com
-    description: ZDNet Production
+- url: https://www.zdnet.com
+  description: ZDNet Production
 tags:
-  - name: News
-    description: General news feeds
-  - name: Security
-    description: Security feeds
-  - name: Cloud
-    description: Cloud computing feeds
-  - name: AI
-    description: Artificial intelligence feeds
+- name: News
+  description: General news feeds
 paths:
   /news/rss.xml:
     get:
@@ -27,7 +19,7 @@ paths:
       summary: ZDNet Get News RSS Feed
       description: Returns the latest news articles from ZDNet as an RSS 2.0 feed.
       tags:
-        - News
+      - News
       responses:
         '200':
           description: RSS 2.0 XML feed
@@ -35,9 +27,11 @@ paths:
             application/rss+xml:
               schema:
                 $ref: '#/components/schemas/RssFeed'
-              example: |
-                <?xml version="1.0" encoding="UTF-8"?>
+              example: '<?xml version="1.0" encoding="UTF-8"?>
+
                 <rss version="2.0"><channel><title>ZDNet</title></channel></rss>
+
+                '
         '404':
           description: Feed not found
           content:
@@ -54,64 +48,13 @@ paths:
       x-microcks-operation:
         delay: 0
         dispatcher: FALLBACK
-  /topic/security/rss.xml:
-    get:
-      operationId: getSecurityRssFeed
-      summary: ZDNet Get Security RSS Feed
-      description: Returns the latest security articles from ZDNet as an RSS 2.0 feed.
-      tags:
-        - Security
-      responses:
-        '200':
-          description: RSS 2.0 XML feed
-          content:
-            application/rss+xml:
-              schema:
-                $ref: '#/components/schemas/RssFeed'
-      x-microcks-operation:
-        delay: 0
-        dispatcher: FALLBACK
-  /topic/cloud/rss.xml:
-    get:
-      operationId: getCloudRssFeed
-      summary: ZDNet Get Cloud RSS Feed
-      description: Returns the latest cloud computing articles from ZDNet as an RSS 2.0 feed.
-      tags:
-        - Cloud
-      responses:
-        '200':
-          description: RSS 2.0 XML feed
-          content:
-            application/rss+xml:
-              schema:
-                $ref: '#/components/schemas/RssFeed'
-      x-microcks-operation:
-        delay: 0
-        dispatcher: FALLBACK
-  /topic/artificial-intelligence/rss.xml:
-    get:
-      operationId: getAiRssFeed
-      summary: ZDNet Get AI RSS Feed
-      description: Returns the latest AI articles from ZDNet as an RSS 2.0 feed.
-      tags:
-        - AI
-      responses:
-        '200':
-          description: RSS 2.0 XML feed
-          content:
-            application/rss+xml:
-              schema:
-                $ref: '#/components/schemas/RssFeed'
-      x-microcks-operation:
-        delay: 0
-        dispatcher: FALLBACK
   /topic/developer/rss.xml:
     get:
       operationId: getDeveloperRssFeed
       summary: ZDNet Get Developer RSS Feed
       description: Returns the latest developer-focused articles from ZDNet as an RSS 2.0 feed.
       tags:
-        - News
+      - News
       responses:
         '200':
           description: RSS 2.0 XML feed
@@ -128,7 +71,7 @@ paths:
       summary: ZDNet Get Innovation RSS Feed
       description: Returns the latest innovation articles from ZDNet as an RSS 2.0 feed.
       tags:
-        - News
+      - News
       responses:
         '200':
           description: RSS 2.0 XML feed
@@ -141,40 +84,12 @@ paths:
         dispatcher: FALLBACK
 components:
   schemas:
-    RssFeed:
-      type: object
-      description: RSS 2.0 feed envelope describing a list of news articles.
-      properties:
-        title:
-          type: string
-          description: Feed title.
-          example: ZDNet
-        link:
-          type: string
-          format: uri
-          description: Feed website URL.
-          example: https://www.zdnet.com
-        description:
-          type: string
-          description: Feed description.
-          example: ZDNet news, analysis, and reviews.
-        language:
-          type: string
-          description: Language code.
-          example: en-US
-        items:
-          type: array
-          description: List of article items.
-          items:
-            $ref: '#/components/schemas/RssItem'
-          example:
-            - {}
     RssItem:
       type: object
       description: A single RSS feed article item.
       required:
-        - title
-        - link
+      - title
+      - link
       properties:
         title:
           type: string
@@ -204,12 +119,40 @@ components:
           items:
             type: string
           example:
-            - AI
-            - Innovation
+          - AI
+          - Innovation
         guid:
           type: string
           description: Unique article identifier.
-          example: 'https://www.zdnet.com/article/example#guid'
+          example: https://www.zdnet.com/article/example#guid
+    RssFeed:
+      type: object
+      description: RSS 2.0 feed envelope describing a list of news articles.
+      properties:
+        title:
+          type: string
+          description: Feed title.
+          example: ZDNet
+        link:
+          type: string
+          format: uri
+          description: Feed website URL.
+          example: https://www.zdnet.com
+        description:
+          type: string
+          description: Feed description.
+          example: ZDNet news, analysis, and reviews.
+        language:
+          type: string
+          description: Language code.
+          example: en-US
+        items:
+          type: array
+          description: List of article items.
+          items:
+            $ref: '#/components/schemas/RssItem'
+          example:
+          - {}
     Error:
       type: object
       description: Error response.

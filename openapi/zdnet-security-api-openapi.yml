@@ -1,0 +1,103 @@
+openapi: 3.0.3
+info:
+  title: ZDNet RSS Feed AI Security API
+  description: RSS feed endpoints from ZDNet covering enterprise IT, security, cloud, AI, development, and innovation news. Each feed returns RSS 2.0 XML content.
+  version: 1.0.0
+  contact:
+    name: ZDNet
+    url: https://www.zdnet.com
+servers:
+- url: https://www.zdnet.com
+  description: ZDNet Production
+tags:
+- name: Security
+  description: Security feeds
+paths:
+  /topic/security/rss.xml:
+    get:
+      operationId: getSecurityRssFeed
+      summary: ZDNet Get Security RSS Feed
+      description: Returns the latest security articles from ZDNet as an RSS 2.0 feed.
+      tags:
+      - Security
+      responses:
+        '200':
+          description: RSS 2.0 XML feed
+          content:
+            application/rss+xml:
+              schema:
+                $ref: '#/components/schemas/RssFeed'
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+components:
+  schemas:
+    RssItem:
+      type: object
+      description: A single RSS feed article item.
+      required:
+      - title
+      - link
+      properties:
+        title:
+          type: string
+          description: Article title.
+          example: New AI breakthrough announced
+        link:
+          type: string
+          format: uri
+          description: Article URL.
+          example: https://www.zdnet.com/article/example
+        description:
+          type: string
+          description: Article summary.
+          example: Article summary text.
+        author:
+          type: string
+          description: Article author.
+          example: Jane Smith
+        pubDate:
+          type: string
+          format: date-time
+          description: Publication date.
+          example: '2026-05-01T12:00:00Z'
+        category:
+          type: array
+          description: Article categories.
+          items:
+            type: string
+          example:
+          - AI
+          - Innovation
+        guid:
+          type: string
+          description: Unique article identifier.
+          example: https://www.zdnet.com/article/example#guid
+    RssFeed:
+      type: object
+      description: RSS 2.0 feed envelope describing a list of news articles.
+      properties:
+        title:
+          type: string
+          description: Feed title.
+          example: ZDNet
+        link:
+          type: string
+          format: uri
+          description: Feed website URL.
+          example: https://www.zdnet.com
+        description:
+          type: string
+          description: Feed description.
+          example: ZDNet news, analysis, and reviews.
+        language:
+          type: string
+          description: Language code.
+          example: en-US
+        items:
+          type: array
+          description: List of article items.
+          items:
+            $ref: '#/components/schemas/RssItem'
+          example:
+          - {}
