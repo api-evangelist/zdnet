@@ -1,51 +1,130 @@
 aid: zdnet
 url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/apis.yml
 apis:
-  - aid: zdnet:rss
-    name: ZDNet RSS Feed
-    description: >-
-      RSS feeds providing the latest news, analysis, and reviews from ZDNet covering enterprise IT, security, cloud,
-      hardware, software, artificial intelligence, and business technology for IT professionals.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://www.zdnet.com/news/rss.xml
-    baseURL: https://www.zdnet.com
-    tags:
-      - Artificial Intelligence
-      - Cloud
-      - Enterprise IT
-      - News Feed
-      - RSS
-      - Security
-      - Technology News
-    properties:
-      - url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/openapi/zdnet-rss.yml
-        type: OpenAPI
-      - url: https://www.zdnet.com/news/rss.xml
-        type: RSS
-        name: ZDNet News RSS Feed
-      - url: https://www.zdnet.com/topic/security/rss.xml
-        type: RSS
-        name: ZDNet Security RSS Feed
-      - url: https://www.zdnet.com/topic/cloud/rss.xml
-        type: RSS
-        name: ZDNet Cloud RSS Feed
-      - url: https://www.zdnet.com/topic/artificial-intelligence/rss.xml
-        type: RSS
-        name: ZDNet AI RSS Feed
-      - url: https://www.zdnet.com/topic/developer/rss.xml
-        type: RSS
-        name: ZDNet Developer RSS Feed
-      - url: https://www.zdnet.com/topic/innovation/rss.xml
-        type: RSS
-        name: ZDNet Innovation RSS Feed
-      - url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-schema/
-        type: JSONSchema
-      - url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-structure/
-        type: JSONStructure
-      - url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-ld/zdnet-rss-context.jsonld
-        type: JSONLD
-      - url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/examples/
-        type: Examples
+- aid: zdnet:zdnet-ai-api
+  name: ZDNet AI API
+  description: Artificial intelligence feeds
+  humanURL: https://www.zdnet.com/news/rss.xml
+  baseURL: https://www.zdnet.com
+  tags:
+  - AI
+  properties:
+  - type: OpenAPI
+    url: openapi/zdnet-ai-api-openapi.yml
+  - type: RSS
+    url: https://www.zdnet.com/news/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/security/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/cloud/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/artificial-intelligence/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/developer/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/innovation/rss.xml
+  - type: JSONSchema
+    url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-schema/
+  - type: JSONStructure
+    url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-structure/
+  - type: JSONLD
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-ld/zdnet-rss-context.jsonld
+  - type: Examples
+    url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/examples/
+- aid: zdnet:zdnet-cloud-api
+  name: ZDNet Cloud API
+  description: Cloud computing feeds
+  humanURL: https://www.zdnet.com/news/rss.xml
+  baseURL: https://www.zdnet.com
+  tags:
+  - Cloud
+  properties:
+  - type: OpenAPI
+    url: openapi/zdnet-cloud-api-openapi.yml
+  - type: RSS
+    url: https://www.zdnet.com/news/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/security/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/cloud/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/artificial-intelligence/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/developer/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/innovation/rss.xml
+  - type: JSONSchema
+    url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-schema/
+  - type: JSONStructure
+    url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-structure/
+  - type: JSONLD
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-ld/zdnet-rss-context.jsonld
+  - type: Examples
+    url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/examples/
+- aid: zdnet:zdnet-news-api
+  name: ZDNet News API
+  description: General news feeds
+  humanURL: https://www.zdnet.com/news/rss.xml
+  baseURL: https://www.zdnet.com
+  tags:
+  - News
+  properties:
+  - type: OpenAPI
+    url: openapi/zdnet-news-api-openapi.yml
+  - type: RSS
+    url: https://www.zdnet.com/news/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/security/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/cloud/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/artificial-intelligence/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/developer/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/innovation/rss.xml
+  - type: JSONSchema
+    url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-schema/
+  - type: JSONStructure
+    url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-structure/
+  - type: JSONLD
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-ld/zdnet-rss-context.jsonld
+  - type: Examples
+    url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/examples/
+- aid: zdnet:zdnet-security-api
+  name: ZDNet Security API
+  description: Security feeds
+  humanURL: https://www.zdnet.com/news/rss.xml
+  baseURL: https://www.zdnet.com
+  tags:
+  - Security
+  properties:
+  - type: OpenAPI
+    url: openapi/zdnet-security-api-openapi.yml
+  - type: RSS
+    url: https://www.zdnet.com/news/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/security/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/cloud/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/artificial-intelligence/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/developer/rss.xml
+  - type: RSS
+    url: https://www.zdnet.com/topic/innovation/rss.xml
+  - type: JSONSchema
+    url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-schema/
+  - type: JSONStructure
+    url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-structure/
+  - type: JSONLD
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/json-ld/zdnet-rss-context.jsonld
+  - type: Examples
+    url: https://raw.githubusercontent.com/api-evangelist/zdnet/refs/heads/main/examples/
 name: ZDNet
 description: >-
   ZDNet is a business technology news website owned by Ziff Davis, covering enterprise IT, cybersecurity, cloud
@@ -57,7 +136,19 @@ tags:
   - Media
   - Technology News
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zdnet.png
 access: 3rd-Party
 common:
   - type: AgenticAccess
