@@ -1,0 +1,20 @@
+{
+  "provider": "zdnet",
+  "sources": [
+    "zdnet-ai-api-openapi.yml",
+    "zdnet-cloud-api-openapi.yml",
+    "zdnet-news-api-openapi.yml",
+    "zdnet-security-api-openapi.yml"
+  ],
+  "outputs": [
+    "zdnet-ai-api-openapi.yml",
+    "zdnet-cloud-api-openapi.yml",
+    "zdnet-news-api-openapi.yml",
+    "zdnet-security-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
