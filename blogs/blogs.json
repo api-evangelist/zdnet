@@ -5,7 +5,7 @@
       "source": "https://www.zdnet.com/news/rss.xml",
       "feed_url": "https://www.zdnet.com/news/rss.xml",
       "title": "",
-      "saved": 0,
+      "saved": 1,
       "method": "feed"
     },
     {
@@ -44,6 +44,6 @@
       "method": "feed"
     }
   ],
-  "post_count": 261,
-  "fetched": "2026-08-01T15:49:00Z"
+  "post_count": 282,
+  "fetched": "2026-08-06T14:08:46Z"
 }
