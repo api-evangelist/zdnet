@@ -230,7 +230,7 @@ common:
     type: UseCases
 created: '2024-01-01'
 modified: '2026-05-19'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
