@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ZDNet RSS Feed AI Cloud API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Cloud",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "ZDNet Get Cloud RSS Feed",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.zdnet.com/topic/cloud/rss.xml"
+          },
+          "docs": "Returns the latest cloud computing articles from ZDNet as an RSS 2.0 feed."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

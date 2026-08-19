@@ -1,0 +1,288 @@
+{
+  "item": [
+    {
+      "id": "521b018f-f03b-429f-9110-2014e666c54e",
+      "name": "News",
+      "description": {
+        "content": "General news feeds",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8f3595e6-f14d-4672-844d-0fd19f50524d",
+          "name": "ZDNet Get News RSS Feed",
+          "request": {
+            "name": "ZDNet Get News RSS Feed",
+            "description": {
+              "content": "Returns the latest news articles from ZDNet as an RSS 2.0 feed.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "news",
+                "rss.xml"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/rss+xml"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e0a34d4f-8358-4453-9dec-3e5dfb68c5c4",
+              "name": "RSS 2.0 XML feed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "news",
+                    "rss.xml"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/rss+xml"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/rss+xml"
+                }
+              ],
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n",
+              "cookie": [],
+              "_postman_previewlanguage": "xml"
+            },
+            {
+              "id": "bcc1a1ea-71ec-425f-8c39-f03c2d748edb",
+              "name": "Feed not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "news",
+                    "rss.xml"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"Example description for this resource.\",\n  \"code\": 100\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e4229e8e-6709-4da6-9b52-221e00baecdf",
+          "name": "ZDNet Get Developer RSS Feed",
+          "request": {
+            "name": "ZDNet Get Developer RSS Feed",
+            "description": {
+              "content": "Returns the latest developer-focused articles from ZDNet as an RSS 2.0 feed.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topic",
+                "developer",
+                "rss.xml"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/rss+xml"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0034d211-b915-4799-ac1c-385df6f963eb",
+              "name": "RSS 2.0 XML feed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topic",
+                    "developer",
+                    "rss.xml"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/rss+xml"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/rss+xml"
+                }
+              ],
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <title>ZDNet</title>\n  <link>https://www.zdnet.com</link>\n  <description>ZDNet news, analysis, and reviews.</description>\n  <language>en-US</language>\n  <items/>\n</element>",
+              "cookie": [],
+              "_postman_previewlanguage": "xml"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "44c1af15-771c-48dc-878e-9c5a5ddec7d3",
+          "name": "ZDNet Get Innovation RSS Feed",
+          "request": {
+            "name": "ZDNet Get Innovation RSS Feed",
+            "description": {
+              "content": "Returns the latest innovation articles from ZDNet as an RSS 2.0 feed.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topic",
+                "innovation",
+                "rss.xml"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/rss+xml"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c76516a3-5775-4d0d-89e2-bc4bcc95855b",
+              "name": "RSS 2.0 XML feed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topic",
+                    "innovation",
+                    "rss.xml"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/rss+xml"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/rss+xml"
+                }
+              ],
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <title>ZDNet</title>\n  <link>https://www.zdnet.com</link>\n  <description>ZDNet news, analysis, and reviews.</description>\n  <language>en-US</language>\n  <items/>\n</element>",
+              "cookie": [],
+              "_postman_previewlanguage": "xml"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.zdnet.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "8c29b1e0-2f34-4bac-af91-03fc82709583",
+    "name": "ZDNet RSS Feed AI News API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "RSS feed endpoints from ZDNet covering enterprise IT, security, cloud, AI, development, and innovation news. Each feed returns RSS 2.0 XML content.\n\nContact Support:\n Name: ZDNet",
+      "type": "text/plain"
+    }
+  }
+}

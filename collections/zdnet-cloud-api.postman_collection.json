@@ -1,0 +1,106 @@
+{
+  "item": [
+    {
+      "id": "0f005ca9-4be2-4169-8632-7327d6cab3a0",
+      "name": "Cloud",
+      "description": {
+        "content": "Cloud computing feeds",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cf2fe274-9581-40c9-933a-aa16fd4501dd",
+          "name": "ZDNet Get Cloud RSS Feed",
+          "request": {
+            "name": "ZDNet Get Cloud RSS Feed",
+            "description": {
+              "content": "Returns the latest cloud computing articles from ZDNet as an RSS 2.0 feed.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topic",
+                "cloud",
+                "rss.xml"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/rss+xml"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "09504692-517e-43fe-a0a0-ed6c601e669d",
+              "name": "RSS 2.0 XML feed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topic",
+                    "cloud",
+                    "rss.xml"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/rss+xml"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/rss+xml"
+                }
+              ],
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <title>ZDNet</title>\n  <link>https://www.zdnet.com</link>\n  <description>ZDNet news, analysis, and reviews.</description>\n  <language>en-US</language>\n  <items/>\n</element>",
+              "cookie": [],
+              "_postman_previewlanguage": "xml"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.zdnet.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7d02fe6f-c64f-4938-9825-80716227dad9",
+    "name": "ZDNet RSS Feed AI Cloud API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "RSS feed endpoints from ZDNet covering enterprise IT, security, cloud, AI, development, and innovation news. Each feed returns RSS 2.0 XML content.\n\nContact Support:\n Name: ZDNet",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "item": [
+    {
+      "id": "7d317f18-7276-4438-9eee-37fd8b236d47",
+      "name": "Security",
+      "description": {
+        "content": "Security feeds",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d8b5d34a-ea33-44ed-be6c-7e75b07daab0",
+          "name": "ZDNet Get Security RSS Feed",
+          "request": {
+            "name": "ZDNet Get Security RSS Feed",
+            "description": {
+              "content": "Returns the latest security articles from ZDNet as an RSS 2.0 feed.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topic",
+                "security",
+                "rss.xml"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/rss+xml"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "035d4d42-66cf-4429-ac0d-1f8808581a5a",
+              "name": "RSS 2.0 XML feed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topic",
+                    "security",
+                    "rss.xml"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/rss+xml"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/rss+xml"
+                }
+              ],
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <title>ZDNet</title>\n  <link>https://www.zdnet.com</link>\n  <description>ZDNet news, analysis, and reviews.</description>\n  <language>en-US</language>\n  <items/>\n</element>",
+              "cookie": [],
+              "_postman_previewlanguage": "xml"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.zdnet.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "417d11df-d384-49af-91d9-2c25271448b5",
+    "name": "ZDNet RSS Feed AI Security API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "RSS feed endpoints from ZDNet covering enterprise IT, security, cloud, AI, development, and innovation news. Each feed returns RSS 2.0 XML content.\n\nContact Support:\n Name: ZDNet",
+      "type": "text/plain"
+    }
+  }
+}

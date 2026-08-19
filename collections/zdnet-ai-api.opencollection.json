@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ZDNet RSS Feed AI API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "AI",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "ZDNet Get AI RSS Feed",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.zdnet.com/topic/artificial-intelligence/rss.xml"
+          },
+          "docs": "Returns the latest AI articles from ZDNet as an RSS 2.0 feed."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
