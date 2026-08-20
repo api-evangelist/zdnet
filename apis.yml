@@ -7,6 +7,8 @@ apis:
   humanURL: https://www.zdnet.com/news/rss.xml
   baseURL: https://www.zdnet.com
   tags:
+  - Artificial Intelligence
+  tags_raw:
   - AI
   properties:
   - type: OpenAPI
