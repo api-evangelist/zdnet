@@ -1,0 +1,7 @@
+---
+title: "Sonos' improved Voice Control points to an intriguing smart home future"
+url: "https://www.zdnet.com/article/sonos-improved-voice-control-intriguing-smart-home-future/"
+date: "2026-08-21"
+feed_url: "https://www.zdnet.com/news/rss.xml"
+---
+Reports suggest that Sonos is preparing to compete in the evolving smart speaker market, readying new hardware and an AI-backed overhaul of its voice assistant.
