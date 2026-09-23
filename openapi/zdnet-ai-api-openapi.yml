@@ -1,4 +1,4 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
   title: ZDNet RSS Feed AI API
   description: RSS feed endpoints from ZDNet covering enterprise IT, security, cloud, AI, development, and innovation news. Each feed returns RSS 2.0 XML content.

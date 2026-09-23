@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: ZDNet RSS Feed AI News API
+  title: ZDNet RSS Feed News API
   description: RSS feed endpoints from ZDNet covering enterprise IT, security, cloud, AI, development, and innovation news. Each feed returns RSS 2.0 XML content.
   version: 1.0.0
   contact:
@@ -84,6 +84,18 @@ paths:
         dispatcher: FALLBACK
 components:
   schemas:
+    Error:
+      type: object
+      description: Error response.
+      properties:
+        message:
+          type: string
+          description: Error message.
+          example: Example description for this resource.
+        code:
+          type: integer
+          description: Error code.
+          example: 100
     RssItem:
       type: object
       description: A single RSS feed article item.
@@ -153,15 +165,3 @@ components:
             $ref: '#/components/schemas/RssItem'
           example:
           - {}
-    Error:
-      type: object
-      description: Error response.
-      properties:
-        message:
-          type: string
-          description: Error message.
-          example: Example description for this resource.
-        code:
-          type: integer
-          description: Error code.
-          example: 100
