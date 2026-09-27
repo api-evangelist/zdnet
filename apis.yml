@@ -5,7 +5,6 @@ apis:
   name: ZDNet AI API
   description: Artificial intelligence feeds
   humanURL: https://www.zdnet.com/news/rss.xml
-  baseURL: https://www.zdnet.com
   tags:
   - Artificial Intelligence
   tags_raw:
@@ -38,7 +37,6 @@ apis:
   name: ZDNet Cloud API
   description: Cloud computing feeds
   humanURL: https://www.zdnet.com/news/rss.xml
-  baseURL: https://www.zdnet.com
   tags:
   - Cloud
   properties:
@@ -69,7 +67,6 @@ apis:
   name: ZDNet News API
   description: General news feeds
   humanURL: https://www.zdnet.com/news/rss.xml
-  baseURL: https://www.zdnet.com
   tags:
   - News
   properties:
@@ -100,7 +97,6 @@ apis:
   name: ZDNet Security API
   description: Security feeds
   humanURL: https://www.zdnet.com/news/rss.xml
-  baseURL: https://www.zdnet.com
   tags:
   - Security
   properties:
