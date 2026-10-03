@@ -84,6 +84,18 @@ paths:
         dispatcher: FALLBACK
 components:
   schemas:
+    Error:
+      type: object
+      description: Error response.
+      properties:
+        message:
+          type: string
+          description: Error message.
+          example: Example description for this resource.
+        code:
+          type: integer
+          description: Error code.
+          example: 100
     RssItem:
       type: object
       description: A single RSS feed article item.
@@ -153,15 +165,3 @@ components:
             $ref: '#/components/schemas/RssItem'
           example:
           - {}
-    Error:
-      type: object
-      description: Error response.
-      properties:
-        message:
-          type: string
-          description: Error message.
-          example: Example description for this resource.
-        code:
-          type: integer
-          description: Error code.
-          example: 100
