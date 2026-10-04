@@ -32,6 +32,34 @@ paths:
         dispatcher: FALLBACK
 components:
   schemas:
+    RssFeed:
+      type: object
+      description: RSS 2.0 feed envelope describing a list of news articles.
+      properties:
+        title:
+          type: string
+          description: Feed title.
+          example: ZDNet
+        link:
+          type: string
+          format: uri
+          description: Feed website URL.
+          example: https://www.zdnet.com
+        description:
+          type: string
+          description: Feed description.
+          example: ZDNet news, analysis, and reviews.
+        language:
+          type: string
+          description: Language code.
+          example: en-US
+        items:
+          type: array
+          description: List of article items.
+          items:
+            $ref: '#/components/schemas/RssItem'
+          example:
+          - {}
     RssItem:
       type: object
       description: A single RSS feed article item.
@@ -73,31 +101,3 @@ components:
           type: string
           description: Unique article identifier.
           example: https://www.zdnet.com/article/example#guid
-    RssFeed:
-      type: object
-      description: RSS 2.0 feed envelope describing a list of news articles.
-      properties:
-        title:
-          type: string
-          description: Feed title.
-          example: ZDNet
-        link:
-          type: string
-          format: uri
-          description: Feed website URL.
-          example: https://www.zdnet.com
-        description:
-          type: string
-          description: Feed description.
-          example: ZDNet news, analysis, and reviews.
-        language:
-          type: string
-          description: Language code.
-          example: en-US
-        items:
-          type: array
-          description: List of article items.
-          items:
-            $ref: '#/components/schemas/RssItem'
-          example:
-          - {}
