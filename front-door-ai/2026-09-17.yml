@@ -1,0 +1,36 @@
+# Front Door AI Index — zdnet — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: zdnet
+  lexicon_version: '1.0'
+  probed_at: '2026-09-25'
+  host: www.zdnet.com
+  final_host: www.zdnet.com
+  ownership: own
+  owner: zdnet
+  shares_host_with: null
+  inherited_from: null
+  alias_of: null
+  verdict: scored
+  score: 14
+  band: 5
+  band_label: prominent
+  host_score: 14
+  density: 9.48
+  words: 1477
+  tiers:
+    agentic: 3
+    core: 10
+    model: 1
+  ambiguous: 9
+  top_terms:
+    AI: 9
+    smart: 7
+    AI agent: 1
+    Gemini: 1
+    agent: 1
+    artificial intelligence: 1
+    chatbot: 1
+    copilot: 1
+    intelligence: 1

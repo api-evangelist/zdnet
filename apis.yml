@@ -161,6 +161,12 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zdnet.png
 access: 3rd-Party
 common:
+  - type: Plans
+    url: plans/zdnet-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/zdnet-rate-limits.yml
+  - type: FinOps
+    url: finops/zdnet-finops.yml
   - type: AgenticAccess
     url: agentic-access/zdnet-agentic-access.yml
   - type: DomainSecurity
